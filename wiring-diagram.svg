@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="700" viewBox="0 0 1160 700">
+  <rect width="1160" height="700" fill="#14100b"/>
+  <text x="580" y="40" text-anchor="middle" fill="#cd7f32" font-family="sans-serif" font-size="26" font-weight="bold">TOWER CHRONOMETER — WIRING DIAGRAM (AS BUILT)</text>
+
+  <!-- ============ DOUBLE-GANG BOX ============ -->
+  <rect x="30" y="70" width="460" height="500" rx="12" fill="none" stroke="#cd7f32" stroke-width="2" stroke-dasharray="10,6"/>
+  <text x="260" y="100" text-anchor="middle" fill="#cd7f32" font-family="sans-serif" font-size="17" font-weight="bold">DOUBLE-GANG BOX — ESP32 + SD MODULE</text>
+
+  <!-- ESP32 -->
+  <rect x="70" y="120" width="170" height="400" rx="10" fill="#000000" stroke="#cd7f32" stroke-width="3"/>
+  <text x="155" y="148" text-anchor="middle" fill="#cd7f32" font-family="sans-serif" font-size="17" font-weight="bold">ESP32 DEVKIT</text>
+  <g font-family="sans-serif" font-size="14" fill="#ffffff">
+    <circle cx="240" cy="180" r="4" fill="#ff4444"/><text x="228" y="185" text-anchor="end">Vin (5V)</text>
+    <circle cx="240" cy="215" r="4" fill="#aaaaaa"/><text x="228" y="220" text-anchor="end">GND</text>
+    <circle cx="240" cy="250" r="4" fill="#ff9933"/><text x="228" y="255" text-anchor="end">GPIO17</text>
+    <circle cx="240" cy="300" r="4" fill="#ff4444"/><text x="228" y="305" text-anchor="end">3V3</text>
+    <circle cx="240" cy="335" r="4" fill="#aaaaaa"/><text x="228" y="340" text-anchor="end">GND</text>
+    <circle cx="240" cy="370" r="4" fill="#bb66ff"/><text x="228" y="375" text-anchor="end">GPIO5</text>
+    <circle cx="240" cy="405" r="4" fill="#ffdd55"/><text x="228" y="410" text-anchor="end">GPIO18</text>
+    <circle cx="240" cy="440" r="4" fill="#55aaff"/><text x="228" y="445" text-anchor="end">GPIO23</text>
+    <circle cx="240" cy="475" r="4" fill="#55dd88"/><text x="228" y="480" text-anchor="end">GPIO19</text>
+  </g>
+
+  <!-- SD MODULE -->
+  <rect x="300" y="120" width="150" height="400" rx="10" fill="#000000" stroke="#cd7f32" stroke-width="3"/>
+  <text x="375" y="148" text-anchor="middle" fill="#cd7f32" font-family="sans-serif" font-size="17" font-weight="bold">MICROSD</text>
+  <text x="375" y="170" text-anchor="middle" fill="#999999" font-family="sans-serif" font-size="13">(SPI)</text>
+  <g font-family="sans-serif" font-size="14" fill="#ffffff">
+    <circle cx="300" cy="300" r="4" fill="#ff4444"/><text x="312" y="305">VCC</text>
+    <circle cx="300" cy="335" r="4" fill="#aaaaaa"/><text x="312" y="340">GND</text>
+    <circle cx="300" cy="370" r="4" fill="#bb66ff"/><text x="312" y="375">CS</text>
+    <circle cx="300" cy="405" r="4" fill="#ffdd55"/><text x="312" y="410">SCK</text>
+    <circle cx="300" cy="440" r="4" fill="#55aaff"/><text x="312" y="445">MOSI</text>
+    <circle cx="300" cy="475" r="4" fill="#55dd88"/><text x="312" y="480">MISO</text>
+  </g>
+  <!-- short jumpers ESP32 -> SD -->
+  <g stroke-width="3" fill="none">
+    <line x1="240" y1="300" x2="300" y2="300" stroke="#ff4444"/>
+    <line x1="240" y1="335" x2="300" y2="335" stroke="#aaaaaa"/>
+    <line x1="240" y1="370" x2="300" y2="370" stroke="#bb66ff"/>
+    <line x1="240" y1="405" x2="300" y2="405" stroke="#ffdd55"/>
+    <line x1="240" y1="440" x2="300" y2="440" stroke="#55aaff"/>
+    <line x1="240" y1="475" x2="300" y2="475" stroke="#55dd88"/>
+  </g>
+
+  <!-- ============ CABLE BETWEEN BOXES ============ -->
+  <rect x="490" y="195" width="160" height="80" rx="10" fill="#2a2a2a" stroke="#888888" stroke-width="2"/>
+  <rect x="480" y="190" width="16" height="90" rx="4" fill="#555555"/>
+  <rect x="644" y="190" width="16" height="90" rx="4" fill="#555555"/>
+  <text x="570" y="292" text-anchor="middle" fill="#999999" font-family="sans-serif" font-size="13">4-conductor cable (3 used)</text>
+  <text x="570" y="310" text-anchor="middle" fill="#999999" font-family="sans-serif" font-size="13">strain reliefs both ends</text>
+
+  <!-- cable conductors (drawn over jacket) -->
+  <g stroke-width="3" fill="none">
+    <line x1="240" y1="180" x2="690" y2="180" stroke="#ff4444"/>
+    <line x1="240" y1="215" x2="690" y2="215" stroke="#aaaaaa"/>
+    <line x1="240" y1="250" x2="690" y2="250" stroke="#ff9933"/>
+  </g>
+
+  <!-- ============ SINGLE-GANG BOX ============ -->
+  <rect x="650" y="70" width="440" height="500" rx="12" fill="none" stroke="#cd7f32" stroke-width="2" stroke-dasharray="10,6"/>
+  <text x="870" y="100" text-anchor="middle" fill="#cd7f32" font-family="sans-serif" font-size="17" font-weight="bold">SINGLE-GANG BOX — RELAY + RECEPTACLE</text>
+  <text x="870" y="122" text-anchor="middle" fill="#999999" font-family="sans-serif" font-size="13">tight fit — double-gang recommended next time</text>
+
+  <!-- RELAY MODULE -->
+  <rect x="690" y="140" width="170" height="190" rx="10" fill="#000000" stroke="#cd7f32" stroke-width="3"/>
+  <text x="775" y="166" text-anchor="middle" fill="#cd7f32" font-family="sans-serif" font-size="17" font-weight="bold">RELAY</text>
+  <text x="775" y="188" text-anchor="middle" fill="#999999" font-family="sans-serif" font-size="13">1-ch, active-LOW</text>
+  <g font-family="sans-serif" font-size="14" fill="#ffffff">
+    <circle cx="690" cy="180" r="4" fill="#ff4444"/><text x="702" y="185">VCC (5V)</text>
+    <circle cx="690" cy="215" r="4" fill="#aaaaaa"/><text x="702" y="220">GND</text>
+    <circle cx="690" cy="250" r="4" fill="#ff9933"/><text x="702" y="255">IN</text>
+  </g>
+  <!-- relay screw terminals on bottom edge -->
+  <rect x="732" y="322" width="16" height="12" fill="#888888"/>
+  <rect x="812" y="322" width="16" height="12" fill="#888888"/>
+  <text x="740" y="352" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="14">COM</text>
+  <text x="820" y="352" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="14">NO</text>
+
+  <!-- DUPLEX RECEPTACLE -->
+  <rect x="900" y="140" width="150" height="190" rx="10" fill="#000000" stroke="#cd7f32" stroke-width="3"/>
+  <text x="975" y="166" text-anchor="middle" fill="#cd7f32" font-family="sans-serif" font-size="13" font-weight="bold">GFCI RECEPTACLE</text>
+  <rect x="925" y="185" width="100" height="58" rx="6" fill="#1a1a1a" stroke="#888888" stroke-width="2"/>
+  <line x1="955" y1="195" x2="955" y2="215" stroke="#888888" stroke-width="3"/>
+  <line x1="975" y1="195" x2="975" y2="215" stroke="#888888" stroke-width="3"/>
+  <circle cx="965" cy="232" r="3" fill="#888888"/>
+  <rect x="925" y="255" width="100" height="58" rx="6" fill="#1a1a1a" stroke="#888888" stroke-width="2"/>
+  <line x1="955" y1="265" x2="955" y2="285" stroke="#888888" stroke-width="3"/>
+  <line x1="975" y1="265" x2="975" y2="285" stroke="#888888" stroke-width="3"/>
+  <circle cx="965" cy="302" r="3" fill="#888888"/>
+  <g font-family="sans-serif" font-size="14" fill="#ffffff">
+    <circle cx="900" cy="300" r="4" fill="#ff4444"/><text x="888" y="305" text-anchor="end">HOT</text>
+    <circle cx="900" cy="260" r="4" fill="#eeeeee"/><text x="888" y="265" text-anchor="end">NEUT</text>
+    <circle cx="900" cy="220" r="4" fill="#33cc66"/><text x="888" y="225" text-anchor="end">GND</text>
+  </g>
+  <text x="975" y="360" text-anchor="middle" fill="#999999" font-family="sans-serif" font-size="13">pump plugs in here (GFCI protected)</text>
+
+  <!-- mains wiring -->
+  <rect x="978" y="562" width="64" height="16" rx="4" fill="#555555"/>
+  <g stroke-width="3" fill="none">
+    <polyline points="990,570 990,370 740,370 740,334" stroke="#999999"/>
+    <polyline points="820,334 820,300 900,300" stroke="#999999"/>
+    <polyline points="1010,570 1010,260 900,260" stroke="#eeeeee"/>
+    <polyline points="1030,570 1030,220 900,220" stroke="#33cc66"/>
+  </g>
+  <g font-family="sans-serif" font-size="12" fill="#999999" text-anchor="middle">
+    <text x="990" y="556">HOT</text>
+    <text x="1012" y="556">NEUT</text>
+    <text x="1034" y="556">GND</text>
+  </g>
+  <text x="870" y="592" text-anchor="middle" fill="#999999" font-family="sans-serif" font-size="13">mains in (strain relief)</text>
+
+  <!-- ============ FOOTER NOTES ============ -->
+  <text x="580" y="622" text-anchor="middle" fill="#b08d57" font-family="sans-serif" font-size="14">Mains: HOT &#8594; relay COM, NO &#8594; GFCI LINE HOT terminal. Neutral and ground run straight to the GFCI.</text>
+  <text x="580" y="644" text-anchor="middle" fill="#b08d57" font-family="sans-serif" font-size="14">Relay module has built-in flyback diode + driver. Active-LOW: GPIO17 LOW = pump ON.</text>
+  <text x="580" y="666" text-anchor="middle" fill="#b08d57" font-family="sans-serif" font-size="14">GFCI receptacle required — cord runs into the humid tent. Deeper than standard (another reason for double-gang).</text>
+</svg>
